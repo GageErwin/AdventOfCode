@@ -29,7 +29,6 @@ for line in content:
     slice = num[:(num_len//2)]
     while len(slice) > 0:
       if num_len % len(slice) == 0 and num.count(slice) == num_len // len(slice):
-        # Remove last digit
         slice = slice[:-1]
         values.append(int(num))
         break
