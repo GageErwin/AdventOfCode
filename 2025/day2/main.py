@@ -14,7 +14,7 @@ for line in content:
     last_half = num[(num_len//2):]
     if first_half == last_half:
       values.append(int(num))
-print("total pairs found: ", sum(values))
+print("Part 1: ", sum(values))
 
 
 
@@ -28,9 +28,7 @@ for line in content:
     num = str(num)
     slice = num[:(num_len//2)]
     while len(slice) > 0:
-      # if num.count(slice) % num_len == 0:
       if num_len % len(slice) == 0 and num.count(slice) == num_len // len(slice):
-        print("found: ", slice, " in ", num)
         # Remove last digit
         slice = slice[:-1]
         values.append(int(num))
